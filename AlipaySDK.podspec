@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "NoUTDID/AlipaySDK.framework"
   s.resource = "NoUTDID/AlipaySDK.bundle"
   s.prepare_command     = <<-EOF
-  mkdir AlipaySDK.framework/Modules
-  touch AlipaySDK.framework/Modules/module.modulemap
-  cat <<-EOF > AlipaySDK.framework/Modules/module.modulemap
+  mkdir NoUTDID/AlipaySDK.framework/Modules
+  touch NoUTDID/AlipaySDK.framework/Modules/module.modulemap
+  cat <<-EOF > NoUTDID/AlipaySDK.framework/Modules/module.modulemap
   framework module AlipaySDK {
     header "AlipaySDK.h"
     header "APayAuthInfo.h"
