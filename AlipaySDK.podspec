@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author             = { "hasayakey" => "hasayakey@gmail.com" }
   s.platform     = :ios, "8.0"
   s.static_framework = true
-  s.source       = { :http => "https://raw.githubusercontent.com/hasayakey/Pay/AliPay/NoUTDID.zip", :type => "zip" }
+  s.source       = { :git => "https://github.com/hasayakey/Pay.git", :tag => s.version }
   s.frameworks = "CoreMotion", "SystemConfiguration", "CoreTelephony"
   s.libraries = "z", "c++"
   s.requires_arc = true
