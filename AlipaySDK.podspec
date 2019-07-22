@@ -10,12 +10,12 @@ Pod::Spec.new do |s|
   s.author             = { "hasayakey" => "hasayakey@gmail.com" }
   s.platform     = :ios, "8.0"
   s.static_framework = true
-  s.source       = { :git => "https://github.com/hasayakey/Pay.git", :tag => s.version }
+  s.source       = { :http => "https://raw.githubusercontent.com/hasayakey/Pay/AliPay/NoUTDID.zip", :type => "zip" }
   s.frameworks = "CoreMotion", "SystemConfiguration", "CoreTelephony"
   s.libraries = "z", "c++"
   s.requires_arc = true
-  s.vendored_frameworks = "AliPay/NoUTDID/AlipaySDK.framework"
-  s.resource = "AliPay/NoUTDID/AlipaySDK.bundle"
+  s.vendored_frameworks = "NoUTDID/AlipaySDK.framework"
+  s.resource = "NoUTDID/AlipaySDK.bundle"
   s.prepare_command     = <<-EOF
   mkdir AlipaySDK.framework/Modules
   touch AlipaySDK.framework/Modules/module.modulemap
