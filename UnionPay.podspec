@@ -17,16 +17,4 @@ Pod::Spec.new do |s|
   s.libraries = "z", "stdc++"
   s.requires_arc = true
   s.vendored_libraries = "UnionPay/libPaymentControl.a"
-  s.prepare_command     = <<-EOF
-  mkdir UnionPay.framework/Modules
-  touch UnionPay.framework/Modules/module.modulemap
-  cat <<-EOF > UnionPay.framework/Modules/module.modulemap
-  framework module UnionPay {
-    header "UPPaymentControl.h"
-    export *
-    link "z"
-    link "stdc++"
-  }
-  \EOF
-  EOF
 end
